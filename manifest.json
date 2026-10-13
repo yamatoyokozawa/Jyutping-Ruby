@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Jyutping Ruby",
+  "version": "0.1.0",
+  "description": "喺網頁漢字上面顯示粵拼。/ Shows Jyutping above Chinese characters on web pages. / 在网页汉字上方显示粤拼。/ ウェブページの漢字に粵拼を表示します。",
+  "permissions": ["storage", "activeTab"],
+  "action": {
+    "default_title": "Jyutping Ruby",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["lib/opencc-cn2t.js", "lib/to-jyutping.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}

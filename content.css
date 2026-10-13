@@ -1,0 +1,22 @@
+ruby.jyut-ruby {
+  ruby-position: over;
+  ruby-align: center;
+}
+
+ruby.jyut-ruby > rt.jyut-rt {
+  font-size: var(--jyut-rt-size, 0.5em);
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: 1;
+  text-transform: none;
+  /* 隣の粵拼と最低でも半角1文字分（左右0.3em×2）空ける */
+  padding: 0 0.3em !important;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+html.jyut-hide-tone rt.jyut-rt > .jyut-tone {
+  display: none;
+}
